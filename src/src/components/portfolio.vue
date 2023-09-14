@@ -19,6 +19,7 @@ const columns    = 3;
 const folderSize = 11;
 
 export default{
+  title: 'Main',
   data(){
     return {
       images: [...Array(folderSize)].map((i,j)=>j+1).reduce(

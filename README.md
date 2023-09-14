@@ -1,6 +1,6 @@
 # Modeling Portfolio
 
-My Modeling Portfolio @ [casey.github.io](https://casey.github.io)
+My Modeling Portfolio @ [caseybrigid.github.io](https://caseybrigid.github.io)
 
 ## Adding/Replacing Images
 1. Compress images for website before upload, this can be done using`compress.sh <infolder> <outfolder>`

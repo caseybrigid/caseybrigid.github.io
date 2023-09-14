@@ -96,10 +96,10 @@ export default{
 
 @keyframes example {
   from {
-    opactiy: 0;
+    opacity: 0;
   }
   to {
-    opactiy: 1;
+    opacity: 1;
   }
 }
 

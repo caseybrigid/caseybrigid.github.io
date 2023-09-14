@@ -30,7 +30,7 @@ export default{
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background-image: url('/portfolio/s_8.JPG');
+    background-image: url('/portfolio/8.JPG');
     height: 1000px;
     background-repeat: no-repeat;
     background-size: cover; 

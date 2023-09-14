@@ -50,6 +50,20 @@ export default{
     font-weight: 400;
     overflow: hidden;
 }
+@media screen and (max-width: 800px) {
+    .info{
+        grid-template-columns: auto;
+    }
+    .grid-container{
+        display: block;
+        width:90%;
+        object-fit: cover;
+        height: 65vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}
 .number{
     text-decoration: none;
     color: black;

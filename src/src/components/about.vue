@@ -6,7 +6,7 @@
             </div>
         </div>
         <div>
-            <img class="imgoffeset" :src="`/about/1.JPG`"/>
+            <img class="imgoffset" :src="`/about/1.JPG`"/>
         </div>
     </div>
 </template>
@@ -53,7 +53,7 @@ export default{
     height: min-content;
 }
 
-.imgoffeset{
+.imgoffset{
     width: 400px;
     object-fit: cover;
     float: right;
@@ -62,8 +62,7 @@ export default{
 @media only screen and (max-width: 1200px) {
   .grid-container {
     padding: 20px;
-    grid-template-columns: auto;
-    grid-template-columns:  50% ;
+    grid-template-columns:  100%;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -77,5 +76,9 @@ export default{
   .about{
     margin-top: 0px;
   }
+  .imgoffset{
+    width: 100%;
+    object-fit: cover;
+}
 }
 </style>

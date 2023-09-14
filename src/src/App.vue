@@ -20,7 +20,7 @@ export default{
   box-sizing: border-box;
 }
 /* https://stackoverflow.com/questions/5102820/scrolling-of-whole-page-instead-of-inner-div-only */
-html, body { height: 100% } 
+html, body { height: 100%; } 
 html,body{
   margin    : 0px;
   top       : 0px;
@@ -28,12 +28,12 @@ html,body{
   overflow-x: hidden;
 }
 .padding{
-  height: 40px;
+  height: 80px;
 }
 .small-padding{
   height: 10px;
 }
-.watermark{
+.watermark{ 
   width:100%;
   text-align: center;
   color: black;

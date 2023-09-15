@@ -7,7 +7,7 @@
         <div>
             <div class="links">
                 <router-link class="link"  :class='{active: (link==this.location)}'
-                    v-for="link in links" :to="link">{{ link }}
+                    v-for="link in links" :to="`/${link}`">{{ link }}
                 </router-link>
             </div>
         </div>
@@ -33,7 +33,7 @@
             <div class="links-container">
                 <div v-for="link in links" >
                     <router-link class="link" :class='{active: (link==this.location)}'
-                     :to="link" @click="navbar=false">
+                     :to="`/${link}`" @click="navbar=false">
                      {{ link }}
                     </router-link>
                 </div>

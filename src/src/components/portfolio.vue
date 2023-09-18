@@ -35,7 +35,7 @@ export default{
   data(){
     return {
       images: [[],[],[],[]],
-      metadata: [],
+      metadata: {},
       show: false
     }
   },
@@ -45,7 +45,7 @@ export default{
     // Get the description file here
     const res             = await fetch('/portfolio/description.json')
     const description     = await res.json()
-    const numPhotos       = description.numberofphotos
+    const numPhotos       = description.photos.length
 
     this.metadata         = description.photos
     const photosPerColumn = Math.ceil(numPhotos/maxColumns)
@@ -53,13 +53,25 @@ export default{
     //     (arr, item, idx) => 
     //     (arr[idx / photosPerColumn | 0] ??= [])
     //     .push(item) && arr, [])
+
+    // Assign pictures to the right columns
     for (let num=1;num<=numPhotos;num++){
       if(num % maxColumns !=0){
-        this.images[(num % maxColumns)-1].push(`${num}.JPG`)
-        console.log(num,"went to",(num % maxColumns)-1)
+        // add picture to column
+        this.images[(num % maxColumns)-1].push(`${description.photos[num-1].filename}`)
+        // add description to picture if present 
+        if (`${description.photos[num-1]?.description}`){
+          this.metadata[`${description.photos[num-1].filename}`] = {
+            "description" : `${description.photos[num-1].description}`
+          }
+        }
       }else{
-        this.images[3].push(`${num}.JPG`)
-        console.log(num,"went to", 3)
+        this.images[3].push(`${description.photos[num-1].filename}`)
+        if (`${description.photos[num-1]?.description}`){
+          this.metadata[`${description.photos[num-1].filename}`] = {
+            "description" : `${description.photos[num-1].description}`
+          }
+        }
       }
     }
     this.show=true

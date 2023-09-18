@@ -1,6 +1,4 @@
 <template>
-    <div class="grid-container">
-    </div>
     <div class="info">
             <a class='number' href="tel:5182850577">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"  style="margin-bottom:-4px; margin-right: 3px;" viewBox="0 0 50 50">
@@ -14,6 +12,9 @@
                     <label>caseysu3@gmail.com</label>
                 </a>
             </div>
+    </div>
+    <br>
+    <div class="grid-container">
     </div>
 </template>
 <script>
@@ -30,11 +31,12 @@ export default{
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background-image: url('/portfolio/8.JPG');
+    background-image: url('/contact/8.JPG');
     height: 1000px;
     background-repeat: no-repeat;
     background-size: cover; 
     margin-bottom: 80px;
+ 
 }
 .info{
     /* margin-left: calc(100vw/4); */

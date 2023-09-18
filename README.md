@@ -3,8 +3,8 @@
 My Modeling Portfolio @ [caseybrigid.github.io](https://caseybrigid.github.io)
 
 ## Adding Images to Portfolio
-1. Compress images for website before upload, this can be done using`compress.sh <infolder> <outfolder>`, filenames require format `<name>.JPG`
-2. Add new photos by placing them in `src/public/<foldername>`, add the name and photo credits to [src/public/portfolio/description.json](src/public/portfolio/description.json) in then order it should appear on the portfolio
+1. Compress images for website before upload, this can be done using`compress.sh <infolder> src/public/portfolio`, filenames require the format `<name>.JPG`
+2. Add name and photo credits to [src/public/portfolio/description.json](src/public/portfolio/description.json) in then order it should appear on the portfolio
 3. Re-compile and upload to github 
 ```bash
 cd src; npm install; npm run build

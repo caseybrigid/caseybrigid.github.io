@@ -1,38 +1,59 @@
 {
-    "numberofphotos" : 11,
-    "photos" : {
-        "1.JPG" : {
-            "description": "Photo credits to jraz4photos"
+    "photos" : [
+        {
+            "filename"         : "1.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "2.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "2.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "3.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "3.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "4.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "4.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "5.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "5.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "6.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "6.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "7.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "7.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "8.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "8.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "9.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "10.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "10.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "11.JPG",
+            "description"      : "Photographer: John Wirasnik",
+            "hiddenDescription": ""
         },
-        "11.JPG" : {
-            "description": "Photo credits to jraz4photos"
+        {
+            "filename"         : "12.JPG",
+            "description"      : "Photographer: Bryant Richards",
+            "hiddenDescription": ""
         }
-    }
+    ]
 }

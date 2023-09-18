@@ -43,7 +43,12 @@ export default{
     // Allow animations to show before requesting all the images and slowing stuff down
     await new Promise(res=>setTimeout(res,1000))
     // Get the description file here
-    const res             = await fetch('/portfolio/description.json')
+    let noCacheRequest = new Headers()
+      noCacheRequest.append('pragma', 'no-cache')
+      noCacheRequest.append('cache-control', 'no-cache')
+      const extras  = { method: 'GET', headers: noCacheRequest}
+      const content = new Request('/portfolio/description.json')
+    const res             = await fetch(content, extras)
     const description     = await res.json()
     const numPhotos       = description.photos.length
 

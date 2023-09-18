@@ -9,7 +9,11 @@
         Shoe - US 9<br> 
     </div>
 </template>
-
+<script>
+export default{
+    title: 'Polaroids'
+}
+</script>
 <style scoped>
 .grid-container{
     margin-top: 40px;

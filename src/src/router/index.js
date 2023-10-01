@@ -23,11 +23,6 @@ const routes = [
     component: polaroids
   },
   {  
-    path: '/about',
-    name: 'about',
-    component: about
-  },
-  {  
     path: '/contact',
     name: 'contact',
     component: contact

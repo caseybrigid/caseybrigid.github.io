@@ -46,7 +46,6 @@
 const links = [
     'portfolio',
     'polaroids',
-    'about',
     'contact'
 ]
 

@@ -17,6 +17,8 @@
             </div>
           </div>
         </Transition >
+        <!-- Run Computed() -->
+        <div :value="runthiswithcomputed"></div>
       </div>
     </div>
 </template>
@@ -40,37 +42,46 @@ export default{
       show: false
     }
   },
-  computed(){
-    // Magic lazy loading https://imagekit.io/blog/lazy-loading-images-complete-guide/
-    var lazyloadImages = document.querySelectorAll("img.lazy"); 
-      console.log(lazyloadImages)   
+  computed:{
+    runthiswithcomputed: {
+    cache: false,
+    get () {
+      console.log("ran computed")
+      // Magic lazy loading https://imagekit.io/blog/lazy-loading-images-complete-guide/
+      var lazyloadImages = document.querySelectorAll("img.lazy"); 
+        
       var lazyloadThrottleTimeout;
       
-      function lazyload () {
-        if(lazyloadThrottleTimeout) {
-          clearTimeout(lazyloadThrottleTimeout);
-        }    
-        
-        lazyloadThrottleTimeout = setTimeout(function() {
+      async function lazyload () {
+          console.log("Lazy Load activated")
+
+          if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }    
+          
+          lazyloadThrottleTimeout = setTimeout(function() {
             var scrollTop = window.scrollY;
             lazyloadImages.forEach(function(img) {
-                if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                  img.src = img.dataset.src;
-                  img.classList.remove('lazy');
-                }
+              if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+              }
             });
             if(lazyloadImages.length == 0) { 
-              document.removeEventListener("scroll", lazyload);
-              window.removeEventListener("resize", lazyload);
-              window.removeEventListener("orientationChange", lazyload);
+              document.removeEventListener("scroll", lazyload, true);
+              window.removeEventListener("resize", lazyload, true);
+              window.removeEventListener("orientationChange", lazyload, true);
             }
-        }, 20);
+          }, 20);
+        }
+        document.addEventListener("scroll", lazyload, true);
+        window.addEventListener("resize", lazyload, true);
+        window.addEventListener("orientationChange", lazyload, true);
+        return Date.now()
       }
-      document.addEventListener("scroll", lazyload);
-      window.addEventListener("resize", lazyload);
-      window.addEventListener("orientationChange", lazyload);
+    }
   },
-  async mounted(){
+  async mounted(){    
     // Allow animations to show before requesting all the images and slowing stuff down
     await new Promise(res=>setTimeout(res,1000))
     // Get the description file here

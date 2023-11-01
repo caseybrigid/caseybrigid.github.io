@@ -17,16 +17,15 @@
             </div>
           </div>
         </Transition >
-        <!-- Run Computed() -->
-        <div :value="runthiswithcomputed"></div>
       </div>
     </div>
 </template>
 
 <script>
-const maxColumns = 4
-const columns    = 3;
-const folderSize = 11;
+const maxColumns           = 4
+const msBetweenNextPicture = 250
+const fadeTime             = 1
+const waitForAnimation     = 250
 
 // [...Array(folderSize)].map((i,j)=>j+1).reduce(
 //         (arr, item, idx) => 
@@ -37,53 +36,15 @@ export default{
   title: 'Main',
   data(){
     return {
-      images: [[],[],[],[]],
+      images: [],
       metadata: {},
       show: false
     }
   },
-  computed:{
-    runthiswithcomputed: {
-    cache: false,
-    get () {
-      console.log("ran computed")
-      // Magic lazy loading https://imagekit.io/blog/lazy-loading-images-complete-guide/
-      var lazyloadImages = document.querySelectorAll("img.lazy"); 
-        
-      var lazyloadThrottleTimeout;
-      
-      async function lazyload () {
-          console.log("Lazy Load activated")
-
-          if(lazyloadThrottleTimeout) {
-            clearTimeout(lazyloadThrottleTimeout);
-          }    
-          
-          lazyloadThrottleTimeout = setTimeout(function() {
-            var scrollTop = window.scrollY;
-            lazyloadImages.forEach(function(img) {
-              if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-              }
-            });
-            if(lazyloadImages.length == 0) { 
-              document.removeEventListener("scroll", lazyload, true);
-              window.removeEventListener("resize", lazyload, true);
-              window.removeEventListener("orientationChange", lazyload, true);
-            }
-          }, 20);
-        }
-        document.addEventListener("scroll", lazyload, true);
-        window.addEventListener("resize", lazyload, true);
-        window.addEventListener("orientationChange", lazyload, true);
-        return Date.now()
-      }
-    }
-  },
-  async mounted(){    
+  async mounted(){   
+    await this.updateColumns();
     // Allow animations to show before requesting all the images and slowing stuff down
-    await new Promise(res=>setTimeout(res,1000))
+    await new Promise(res=>setTimeout(res, waitForAnimation))
     // Get the description file here
     let noCacheRequest = new Headers()
       noCacheRequest.append('pragma', 'no-cache')
@@ -96,6 +57,8 @@ export default{
 
     this.metadata         = description.photos
     const photosPerColumn = Math.ceil(numPhotos/maxColumns)
+    this.show=true
+
     // this.images = [...Array(numPhotos)].map((i,j)=>j+1).reduce(
     //     (arr, item, idx) => 
     //     (arr[idx / photosPerColumn | 0] ??= [])
@@ -112,16 +75,63 @@ export default{
             "description" : `${description.photos[num-1].description}`
           }
         }
+        await new Promise(res=>setTimeout(res,msBetweenNextPicture))
       }else{
-        this.images[3].push(`${description.photos[num-1].filename}`)
+        this.images[maxColumns-1].push(`${description.photos[num-1].filename}`)
         if (`${description.photos[num-1]?.description}`){
           this.metadata[`${description.photos[num-1].filename}`] = {
             "description" : `${description.photos[num-1].description}`
           }
         }
+        await new Promise(res=>setTimeout(res,msBetweenNextPicture))
       }
     }
-    this.show=true
+
+    /* attempt at lazy loading
+    await new Promise(res=>setTimeout(res,1000))
+
+    var lazyloadImages = document.querySelectorAll("img.lazy"); 
+    for (let i=0; i<maxColumns; i++){
+      lazyloadImages[i].src = lazyloadImages[i].getAttribute('data-src')
+    }
+      var lazyloadThrottleTimeout;
+      
+      async function lazyload () {
+          console.log("Lazy Load activated")
+
+          if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }    
+          
+          lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.scrollY;
+            lazyloadImages.forEach(function(img) {
+              if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.getAttribute('data-src');
+                console.log(img)
+                img.classList.remove('lazy');
+              }
+            });
+            if(lazyloadImages.length == 0) { 
+              document.removeEventListener("scroll", lazyload, true);
+              window.removeEventListener("resize", lazyload, true);
+              window.removeEventListener("orientationChange", lazyload, true);
+            }
+          }, 1000);
+        }
+        document.addEventListener("scroll", lazyload, true);
+        window.addEventListener("resize", lazyload, true);
+        window.addEventListener("orientationChange", lazyload, true);
+        */
+  },
+  methods: {
+    async updateColumns(){
+      var r = document.querySelector(':root');
+      r.style.setProperty('--columns', maxColumns);
+      r.style.setProperty('--fade-time', `${fadeTime}s`);
+      let stupid = '[' +  '[],'.repeat(maxColumns-1) + '[]' + ']'
+      this.images = JSON.parse(stupid)
+    }
   },
 }
 </script>
@@ -136,31 +146,6 @@ export default{
 .v-leave-to {
   opacity: 0;
 }
-/* .grid-container{
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
-  width: 100vw;
-  grid-template-columns: repeat(4, calc((100vw - 40px - 40px)/4));
-  grid-column-gap      : 10px;
-  padding-left : 20px;
-  padding-right: 20px;
-}
-@media only screen and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns:  90% ;
-  }
-}
-.grid-item{
-  object-fit: cover;
-  overflow: hidden;
-}
-.img-container{
-  width: 100%;
-  object-fit: cover;
-} */
 .grid-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -168,13 +153,14 @@ export default{
   flex-wrap: wrap;
   padding: 10px 65px 80px;
   padding-top: 60px;
+  justify-content: center;
 }
 
 /* Create four equal columns that sits next to each other */
 .grid-item {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
+  -ms-flex: calc(min(100% / var(--columns), 35%)); /* IE10 */
+  flex: calc(min(100% / var(--columns), 35%));
+  max-width: calc(min(100% / var(--columns), 35%));
   padding: 0 6px;
 }
 
@@ -182,7 +168,8 @@ export default{
   margin-top: 12px;
   vertical-align: middle;
   width: 100%;
-  animation: example 3s ease;
+  animation: example var(--fade-time) ease;
+  background: #F1F1FA;
 }
 
 @keyframes example {
@@ -194,9 +181,6 @@ export default{
   }
 }
 
-.grid-item img:hover{
-  /* opacity: .7; */
-}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 /* @media screen and (max-width: 1024px) {
@@ -219,6 +203,7 @@ export default{
   }
   .grid-container{
     padding: 10px 15px;
+    justify-items: center;
   }
 }
 

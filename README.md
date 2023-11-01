@@ -19,6 +19,7 @@ git push
     - [ ] Reorder list of images side view, with option to delete images | next to preview of main page
     - [ ] Save button, that saves the new description.json to the portfolio folder, rebuilds the website and uploads it to github (git pull on startup)
         - Requires github ssh key
+- [ ] Avoid Scanning Of Loading Images
 - [x] Automate column/image placement in Portfolio
 - [x] Add photo credit overlay support
 - [x] Make update/reorder process for images (column major)

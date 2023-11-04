@@ -22,7 +22,7 @@
 </template>
 
 <script>
-const maxColumns           = 4
+const maxColumns           = 2
 const msBetweenNextPicture = 250
 const fadeTime             = 1
 const waitForAnimation     = 250

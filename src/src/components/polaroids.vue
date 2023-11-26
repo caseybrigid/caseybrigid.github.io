@@ -82,10 +82,8 @@ export default{
   position: relative;
   /* background: black; */
   width: 100%;
-  height: 100%;
   border: 3px solid white; 
   animation: example var(--fade-time) ease;
-  object-fit: cover;
 }
 @keyframes example {
   from {

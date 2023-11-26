@@ -1,9 +1,11 @@
 import { createWebHistory, createRouter } from "vue-router"
 import PageNotFound from '../components/PageNotFound.vue'
-import portfolio from '../components/portfolio.vue'
+import portfolio from '../components/portfolio-v3.vue'
 import about from '../components/about.vue'
 import contact from '../components/contact.vue'
 import polaroids from '../components/polaroids.vue'
+import edit from '../components/edit-v2.vue'
+
 
 /* Define routes and rendering in order of priority */
 const routes = [
@@ -26,6 +28,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: contact
+  },
+  { 
+    path: '/edit',
+    name: 'edit',
+    component: edit
   },
   { 
     path: '/:pathMatch(.*)*',

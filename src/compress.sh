@@ -1,7 +1,7 @@
 #!/bin/bash
 checkDirectries(){
     if test -d $1; then
-        echo $1: "Directory exists"
+        echo $1: "Input Directory exists"
     else
         echo "Couldn't find input directory, exiting..."
         echo ""
@@ -9,7 +9,7 @@ checkDirectries(){
     fi
 
     if test -d $2; then
-        echo $2: "Directory exists"
+        echo $2: "Output Directory exists"
         sleep 1
     else
         echo "Couldn't find output directory, exiting..."
@@ -19,7 +19,7 @@ checkDirectries(){
 }
 
 compressFiles(){
-files=`ls $1 | grep .*.JPG`
+files=`ls $1 |  grep -iE ".*.(JPG|JPEG)"`
 for file in $files; do
     echo Compressing $1/$file into $2/$file 
     ffmpeg -y -i $1/$file -q:v 10 $2/$file -hide_banner -loglevel error

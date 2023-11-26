@@ -1,159 +1,160 @@
 {
   "photos": [
     {
-      "filename": "1.JPG",
+      "filename": "pick1.JPEG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "2.JPG",
+      "filename": "61299CB3-0EB2-4A96-A36C-A5D0B8CB784A.JPEG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "3.JPG",
+      "filename": "133A1032-CR3_DxO_DeepPRIME.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "4.JPG",
+      "filename": "133A1082-CR3_DxO_DeepPRIME.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "5.JPG",
+      "filename": "IMG_2841.JPG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "6.JPG",
+      "filename": "IMG_2839.JPG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "7.JPG",
+      "filename": "16552674-F861-4B7E-B689-730712F229BE.JPEG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "8.JPG",
+      "filename": "A5B9EFBE-62E0-4C2D-8377-BBD3D4534269.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "9.JPG",
+      "filename": "47104B06-7FB3-41AA-8051-BFC5CA8A2B50.JPEG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "10.JPG",
+      "filename": "_R1A6406.CR3.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "11.JPG",
+      "filename": "_R1A8009.CR3.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "12.JPG",
+      "filename": "B1B1838A-27A6-4C35-8EAD-3390C265D0DD.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "13.JPG",
+      "filename": "5EEC6862-BB93-4BC3-A054-8217A7779F04.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "14.JPG",
+      "filename": "RAZ_1324.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "15.JPG",
+      "filename": "D78BFF91-3597-4D14-B2E5-83358F7286B4.JPEG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "16.JPG",
+      "filename": "1BACD239-C2A6-464D-952B-91A888A24CEE.JPEG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "17.JPG",
+      "filename": "IMG_2850.JPG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "18.JPG",
+      "filename": "IMG_2852.JPG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "19.JPG",
+      "filename": "133A1540-CR3_DxO_DeepPRIME.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "20.JPG",
+      "filename": "IMG_1563.JPG",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "21.JPG",
+      "filename": "7H9A0267.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "22.JPG",
+      "filename": "7H9A0093.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "23.JPG",
+      "filename": "7H9A0233.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "24.JPG",
+      "filename": "7H9A05162.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 1
     },
     {
-      "filename": "25.JPG",
+      "filename": "IMG_1559.jpg",
       "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     },
     {
-      "filename": "26.JPG",
+      "filename": "raz_1543.JPG",
       "description": "",
-      "hiddenDescription": ""
-    },
-    {
-      "filename": "27.JPG",
-      "description": "",
-      "hiddenDescription": ""
-    },
-    {
-      "filename": "28.JPG",
-      "description": "",
-      "hiddenDescription": ""
-    },
-    {
-      "filename": "29.JPG",
-      "description": "",
-      "hiddenDescription": ""
-    },
-    {
-      "filename": "30.JPG",
-      "description": "",
-      "hiddenDescription": ""
-    },
-    {
-      "filename": "31.JPG",
-      "description": "",
-      "hiddenDescription": ""
+      "hiddenDescription": "",
+      "group": 2
     }
   ]
 }

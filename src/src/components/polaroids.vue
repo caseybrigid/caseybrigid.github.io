@@ -12,7 +12,7 @@
     <div class="center">
         <div class="column">
             <div class="row">
-                <img v-for="image in images" class="img" :src="`poloroids/${image}`"/>
+                <img v-for="image in images" class="img" :src="`/poloroids/${image}`"/>
             </div>
         </div>
     </div>  

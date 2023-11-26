@@ -3,7 +3,7 @@
   <div class="center">
     <div class="column">
       <div v-for="group in images" class="row">
-          <img v-for="image in group" class="img" :src="`portfolio/${image.filename}`">
+          <img v-for="image in group" class="img" :src="`/portfolio/${image.filename}`">
       </div>
     </div>
   </div>  

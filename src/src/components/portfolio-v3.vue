@@ -96,6 +96,7 @@ export default{
   height: 100%;
   border: 3px solid white; 
   animation: example var(--fade-time) ease;
+  animation: blur calc(var(--fade-time) / 3) ease;
 }
 @keyframes example {
   from {
@@ -105,7 +106,14 @@ export default{
     opacity: 1;
   }
 }
-
+@keyframes blur {
+  from {
+    filter: blur(1.5rem);
+  }
+  to {
+    filter: blur(0);
+  }
+}
 @media screen and (max-width: 1024px) {
   .column{
     width: 90%;

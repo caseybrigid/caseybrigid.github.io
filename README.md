@@ -33,6 +33,8 @@ If you'd like to use this site as a template, be sure to change the base address
 - [ffmpeg](https://ffmpeg.org/)
 - [vscode](https://code.visualstudio.com/download) (optional)
 
-
+## Resources
+- [Converting image formats for large images on websites](https://stackoverflow.com/questions/40127266/change-jpeg-into-progressive-jpeg-image)
+- [images](https://cloudinary.com/blog/progressive_jpegs_and_green_martians)
 
 

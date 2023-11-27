@@ -96,7 +96,7 @@ export default{
   height: 100%;
   border: 3px solid white; 
   animation: example var(--fade-time) ease;
-  animation: blur calc(var(--fade-time) / 3) ease;
+  animation: blur calc(var(--fade-time)) steps(5, end);
 }
 @keyframes example {
   from {
@@ -107,11 +107,17 @@ export default{
   }
 }
 @keyframes blur {
-  from {
-    filter: blur(1.5rem);
+  0% {
+    filter: grayscale(80%) blur(.5rem);
   }
-  to {
-    filter: blur(0);
+  25% {
+    filter: blur(.1rem) sepia(40%) grayscale(30%);
+  }
+  50% {
+    filter: blur(0) grayscale(30%) sepia(10%);
+  }
+  100% {
+    filter: grayscale(0%);
   }
 }
 @media screen and (max-width: 1024px) {

@@ -36,5 +36,6 @@ If you'd like to use this site as a template, be sure to change the base address
 ## Resources
 - [Converting image formats for large images on websites](https://stackoverflow.com/questions/40127266/change-jpeg-into-progressive-jpeg-image)
 - [images](https://cloudinary.com/blog/progressive_jpegs_and_green_martians)
+- [vue image loaded directive](https://stackoverflow.com/questions/47984004/vuejs-2-how-to-detect-img-complete-property/50931942#comment136735840_50931942)
 
 

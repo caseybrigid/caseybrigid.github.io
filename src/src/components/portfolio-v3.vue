@@ -3,7 +3,11 @@
   <div class="center">
     <div class="column">
       <div v-for="group in images" class="row">
-          <img v-for="image in group" class="img" :src="`/portfolio/${image.filename}`">
+          <div v-for="image in group">
+            <img v-show="image.loaded" v-loadedifcomplete="image"
+             @load="image.loaded = true"  class="img" :src="`/portfolio/${image.filename}`">
+             <!-- <img v-show="!image.loaded" class="waiting"> -->
+          </div>
       </div>
     </div>
   </div>  
@@ -22,6 +26,13 @@ const waitForAnimation     = 1250
 
 export default{
   title: 'Main',
+  directives: {
+    loadedifcomplete: function(el, binding) {
+       if (el.complete) {
+         binding.value.loaded = true;
+       }
+    }
+  },
   data(){
     return {
       images: [],
@@ -98,6 +109,18 @@ export default{
   animation: example var(--fade-time) ease;
   animation: blur calc(var(--fade-time)) steps(5, end);
 }
+.waiting{
+  display: block;
+  background: #EDEDED;
+  position: relative;
+  border: white;
+  /* background: black; */
+  width: 100%;
+  height: 100%;
+  border: 3px solid white; 
+  animation: example var(--fade-time) ease;
+  animation: blur2 calc(var(--fade-time)) steps(5, end);
+}
 @keyframes example {
   from {
     opacity: 0;
@@ -108,7 +131,7 @@ export default{
 }
 @keyframes blur {
   0% {
-    filter: grayscale(80%) blur(.5rem);
+    filter: grayscale(80%) blur(.2rem);
   }
   25% {
     filter: blur(.1rem) sepia(40%) grayscale(30%);
@@ -118,6 +141,20 @@ export default{
   }
   100% {
     filter: grayscale(0%);
+  }
+}
+@keyframes blur2 {
+  0% {
+    filter: blur(.5rem) grayscale(1%);
+  }
+  25% {
+    filter: blur(.1rem) grayscale(0%);
+  }
+  50% {
+    filter: blur(.5rem) grayscale(1%);
+  }
+  100% {
+    filter: grayscale(0%) blur(0);
   }
 }
 @media screen and (max-width: 1024px) {

@@ -3,8 +3,8 @@
         <p class="label">Measurements</p>
         Height - 6′ 1″<br> 
         Bust - 34″<br> 
-        Waist - 26″<br> 
-        Hips - 39″<br> 
+        Waist - 25″<br> 
+        Hips - 38″<br> 
         Dress - 4<br> 
         Shoe - US 9<br> 
     </div>

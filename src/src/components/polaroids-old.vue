@@ -10,32 +10,27 @@
     </div>
     <br>
     <div class="center">
-      <div class="column">
-        <div class="row">
-          <div v-for="image,index in images" >
-                <img v-show="image.loaded" v-loadedifcomplete="image"
-                @load="image.loaded = true" class="img" :src="`/poloroids/${index+1}.jpg`">
-                <!-- <img v-show="!image.loaded" class="waiting"> -->
-          </div>
-      </div>
-      </div>
+        <div class="column">
+            <div class="row">
+                <img v-for="image in images" class="img" :src="`/poloroids/${image}`"/>
+            </div>
+        </div>
     </div>  
 </template>
 <script>
 
 export default{
     title: 'Polaroids',
-    directives: {
-      loadedifcomplete: function(el, binding) {
-        if (el.complete) {
-          binding.value.loaded = true;
-        }
-      }
-    },
     data(){
         return {
-            images: [{},{},{},{},{},{}],
-            show: false
+            images: [ "Close.jpg", 
+                      "CloseSmile.jpg",
+                      "ProfileClose.jpg",
+                      "Upper.JPG",       
+                      "Full.JPEG",                     
+                      "LeftSide.jpg",       
+                      "RightSide.jpg"
+                    ]
         }
     }
 }
@@ -80,9 +75,8 @@ export default{
 	display: grid;
   /* background: grey; */
   /* padding: 5px; */
-  grid-template-columns: repeat(auto-fit, 50%);
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   align-content: center;
-  align-items: center;
 }
 .img{
   position: relative;

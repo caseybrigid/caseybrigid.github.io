@@ -19,7 +19,7 @@ checkDirectries(){
 }
 
 compressFiles(){
-files=`ls $1 |  grep -iE ".*.(JPG|JPEG)"`
+files=`ls $1 |  grep -iE ".*.(JPG|JPEG|jpg|jpeg)"`
 for file in $files; do
     echo Compressing $1/$file into $2/$file 
     #ffmpeg -y -i $1/$file -q:v 10 $2/$file -hide_banner -loglevel error

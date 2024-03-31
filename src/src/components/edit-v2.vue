@@ -155,7 +155,7 @@
     display: grid;
     /* background: grey; */
     /* padding: 5px; */
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
   }
 
 </style>

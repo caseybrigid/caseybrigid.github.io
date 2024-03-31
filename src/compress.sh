@@ -21,10 +21,10 @@ checkDirectries(){
 compressFiles(){
 files=`ls $1 |  grep -iE ".*.(JPG|JPEG|jpg|jpeg)"`
 for file in $files; do
-    echo Compressing $1/$file into $2/$file 
+    echo Compressing "$1/$file" into "$2/$file" 
     #ffmpeg -y -i $1/$file -q:v 10 $2/$file -hide_banner -loglevel error
     #convert $1/$file -interlace plane $2/$file
-    jpegtran -copy none -progressive -outfile $2/$file $1/$file 
+    jpegtran -copy none -progressive -outfile "$2/$file" "$1/$file" 
     # ffmpeg -y -i $file -q:v 100 l_$file
     # convert -strip -interlace plane -quality 10 s_$file c_$file
 done

@@ -2,7 +2,7 @@ import {readdirSync,writeFileSync}   from 'fs'
 
 let jsonOut = {photos:[]}
 
-const files= readdirSync('.')
+const files= readdirSync('src/public/portfolio/img')
 
 let thisGroup=1
 let times=1
@@ -22,5 +22,5 @@ for (let i=1; i<files.length; i++){
 
 let prettyText = JSON.stringify(jsonOut, null, "  ")
 
-writeFileSync('description.json',prettyText)
+writeFileSync('src/public/portfolio/description.json',prettyText)
 

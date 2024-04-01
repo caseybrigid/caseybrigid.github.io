@@ -5,7 +5,7 @@
       <div v-for="group in images" class="row">
           <div v-for="image in group">
             <img v-show="image.loaded" v-loadedifcomplete="image"
-             @load="image.loaded = true"  class="img" :src="`/portfolio/${image.filename}`">
+             @load="image.loaded = true"  class="img" :src="`/portfolio/img/${image.filename}`">
              <!-- <img v-show="!image.loaded" class="waiting"> -->
           </div>
       </div>

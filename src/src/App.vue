@@ -1,5 +1,4 @@
 <template>
-  <!-- credits to inspiration for style: https://www.amy-lily.com -->
   <navbar/>
   <router-view></router-view>
   <div class="padding"></div>

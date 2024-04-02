@@ -4,7 +4,7 @@
               <div class="column">
                 <draggable class="row" group="people" v-model="images" @start="drag=true" @end="drag=false" item-key="id">
                   <template #item="{element}">
-                    <div class="title"><img class="img" :src="`portfolio/${element.filename}`"
+                    <div class="title"><img class="img" :src="`portfolio/img/${element.filename}`"
                       :class="{ 'group1':  element.group==2, 'group2': element.group==1 }"
                       @click="element.group=element.group%2+1"></div>
                   </template>

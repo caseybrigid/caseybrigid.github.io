@@ -97,7 +97,7 @@ export default{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: white;
+    background: var(--bg-color);
     z-index: 10;
 }
 .v-enter-active,
@@ -120,7 +120,6 @@ export default{
     font-family: Lato, sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #000000;
     overflow:hidden;
     text-transform: uppercase;
     padding-right:15px;
@@ -130,7 +129,7 @@ export default{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* fallback to arial if no helvetica */
   font-size: 58px;
   font-weight: 700;
-  color: #303030;
+  color: var(--font-color);
   text-transform: uppercase;
   letter-spacing: .3rem;
   text-decoration: none;
@@ -151,7 +150,6 @@ export default{
         height: max-content;
         overflow: auto;
         width: min-content;
-        background: white;
         display: block;
         text-align: left;
     }
@@ -181,11 +179,11 @@ export default{
   }
 }
 .link{
-    color: black;
     text-decoration: none;
     width: min-content;
     text-align: left;
     overflow:hidden;
+    color: var(--link-color);
 }
 :link:hover{
     opacity: .8;
@@ -197,7 +195,6 @@ export default{
 .logo:hover{
     color: #555555;
     text-decoration: none;
-
 }
 
 
@@ -235,7 +232,7 @@ h1 {
     padding: 0;
     width: 35px;
     height: 2px;
-    background-color: black;
+    background-color: var(--font-color);
     display: block;
     border-radius: 4px;
     transition: all 0.2s ease-in-out;

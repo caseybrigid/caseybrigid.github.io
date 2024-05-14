@@ -90,22 +90,20 @@ export default{
 .column{
 	width: 50%;
 	display: grid;
-  /* background: blue; */
-  /* padding: 5px; */
+  grid-gap: 6px;
 }
 .row{
 	width: 100%;
 	display: grid;
-  /* background: grey; */
-  /* padding: 5px; */
   grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-gap: 6px;
 }
 .img{
   position: relative;
   /* background: black; */
   width: 100%;
   height: 100%;
-  border: 3px solid white; 
+  /* border: 3px solid white;  */
   animation: example var(--fade-time) ease;
   animation: blur calc(var(--fade-time)) steps(5, end);
 }

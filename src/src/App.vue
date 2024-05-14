@@ -15,6 +15,27 @@ export default{
 </script>
 
 <style>
+/* :root{
+  --bg-color      : #010508;
+  --sec-bg-color  : #0C1116;
+  --font-color    : #E6EDF3;
+  --sec-font-color: #858C96;
+  --link-color    : #4493F8;
+  --button-color  : #050b06;
+  --text-box-color: #171A22;
+  --filter-button-color : #21242F;
+}  */
+:root{
+  --bg-color      : #FFFFFF; 
+  --sec-bg-color  : #F4F4F4;
+  --font-color    : #333333;
+  --sec-font-color: #666666;
+  --link-color    : black;
+  --button-color  : #28A745;
+  --text-box-color: #F8F9FA;
+  --filter-button-color: #EAEAEA;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -23,7 +44,7 @@ html, body { height: 100%; }
 html,body{
   margin    : 0px;
   top       : 0px;
-  background: white;
+  background: var(--bg-color);
   overflow-x: hidden;
 }
 .padding{
@@ -35,7 +56,7 @@ html,body{
 .watermark{ 
   width:100%;
   text-align: center;
-  color: black;
+  color: var(--font-color);
   opacity: .45;
         font-size: 16px;
         font-family: lato, sans-serif;

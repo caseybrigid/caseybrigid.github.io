@@ -34,7 +34,7 @@ export default{
     },
     data(){
         return {
-            images: [{},{},{},{},{},{}],
+            images: [{},{},{},{}],
             show: false
         }
     }

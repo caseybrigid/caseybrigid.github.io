@@ -1,10 +1,16 @@
 {
   "photos": [
     {
-      "filename": "10.jpg",
+      "filename": "1.jpg",
       "description": "",
       "hiddenDescription": "",
       "group": 1
+    },
+    {
+      "filename": "10.jpg",
+      "description": "",
+      "hiddenDescription": "",
+      "group": 2
     },
     {
       "filename": "11.jpg",
@@ -16,7 +22,7 @@
       "filename": "12.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "13.jpg",
@@ -28,7 +34,7 @@
       "filename": "14.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     },
     {
       "filename": "15.jpg",
@@ -40,7 +46,7 @@
       "filename": "16.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "17.jpg",
@@ -52,7 +58,7 @@
       "filename": "18.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     },
     {
       "filename": "19.jpg",
@@ -64,7 +70,7 @@
       "filename": "2.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "20.jpg",
@@ -76,7 +82,7 @@
       "filename": "21.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     },
     {
       "filename": "22.jpg",
@@ -88,7 +94,7 @@
       "filename": "23.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "24.jpg",
@@ -100,7 +106,7 @@
       "filename": "25.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     },
     {
       "filename": "26.jpg",
@@ -112,7 +118,7 @@
       "filename": "27.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "28.jpg",
@@ -124,7 +130,7 @@
       "filename": "29.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     },
     {
       "filename": "3.jpg",
@@ -136,7 +142,7 @@
       "filename": "30.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "4.jpg",
@@ -148,7 +154,7 @@
       "filename": "5.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     },
     {
       "filename": "6.jpg",
@@ -160,7 +166,7 @@
       "filename": "7.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 2
+      "group": 1
     },
     {
       "filename": "8.jpg",
@@ -172,7 +178,7 @@
       "filename": "9.jpg",
       "description": "",
       "hiddenDescription": "",
-      "group": 1
+      "group": 2
     }
   ]
 }

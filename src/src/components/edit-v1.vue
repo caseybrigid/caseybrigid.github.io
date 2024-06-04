@@ -19,7 +19,7 @@
               <div class="column">
                 <draggable class="row group" v-for="item,groupNumber in images.length" v-model="images[groupNumber]" group="people"  @start="drag=true" @end="drag=false" item-key="id">
                   <template #item="{element}">
-                    <div class="title"><img class="img" :src="`portfolio/${element.filename}`"></div>
+                    <div class="title"><img class="img" :src="`/portfolio/${element.filename}`"></div>
                   </template>
                 </draggable>
               </div>

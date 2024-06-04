@@ -77,12 +77,12 @@
         // Export all pretty
         const blob = new Blob([JSON.stringify(description,null, 2)])
         // To downloads folder
-        // const link = document.createElement("a")
-        // link.download = "description.json"
-        // link.href = window.URL.createObjectURL(blob)
-        // link.click()
+        const link = document.createElement("a")
+        link.download = "description.json"
+        link.href = window.URL.createObjectURL(blob)
+        link.click()
         // Pick Folder
-        const supportsFileSystemAccess = 'showSaveFilePicker' in window && (() => {
+        /*const supportsFileSystemAccess = 'showSaveFilePicker' in window && (() => {
           try {
             return window.self === window.top;
           } catch {
@@ -102,7 +102,7 @@
               return
             }
           }
-        }
+        }*/
       },
 
     },

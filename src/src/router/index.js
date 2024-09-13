@@ -4,7 +4,7 @@ import portfolio from '../components/portfolio-v3.vue'
 import about from '../components/about.vue'
 import contact from '../components/contact.vue'
 import polaroids from '../components/polaroids.vue'
-import edit from '../components/edit-v2.vue'
+import edit from '../components/edit-v4.vue'
 
 
 /* Define routes and rendering in order of priority */

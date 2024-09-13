@@ -2,7 +2,9 @@
   <navbar/>
   <router-view></router-view>
   <div class="padding"></div>
-  <div class="watermark">Made with ❤️ by my boyfriend</div>
+  <!-- <div class="watermark">Made with ❤️</div> -->
+  <div class="watermark">casey brigid</div>
+
   <div class="small-padding"></div>
 </template>
 

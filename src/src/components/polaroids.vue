@@ -3,8 +3,8 @@
       <p class="label">Measurements</p>
       Height - 6′ 1″<br> 
       Bust - 34″<br> 
-      Waist - 25″<br> 
-      Hips - 38″<br> 
+      Waist - 24″<br> 
+      Hips - 37″<br> 
       Dress - 4<br> 
       Shoe - US 9<br> 
   </div>
@@ -50,12 +50,13 @@ export default{
 }
 .label{
     font-family: Lato, sans-serif;
-    font-size  : 16px;
+    font-size  : 20px;
     font-weight: 400;
     line-height: 20px;
     color      : var(--font-color);
     text-align: center;
     text-transform: uppercase;
+    padding-bottom: 10px;
 }
 .measurements{
     font-family: Lato, sans-serif;
@@ -63,7 +64,7 @@ export default{
     font-weight: 400;
     line-height: 21px;
     color      : var(--font-color);
-    text-align: center;
+    text-align : center;
 }
 .center{
   width: 100%;

@@ -14,7 +14,9 @@
             </div>
     </div>
     <br>
-    <div class="grid-container">
+    <div class="blur-container">
+        <div class="blurred-background"></div>
+        <img class="cover-img" :src="'/contact/8.JPG'" />
     </div>
 </template>
 <script>
@@ -24,19 +26,31 @@ export default{
 </script>
 
 <style scoped>
-.grid-container{
+.blur-container{
+    position: relative;
     display: grid;
     width: 100%;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    background-image: url('/contact/8.JPG');
     height: 1000px;
+    margin-bottom: 80px;
+    justify-items: center;
+}
+.blurred-background{
+    width: 99%;
+    height:80%;
+    background-image: url('8.JPG');
     background-repeat: no-repeat;
     background-size: cover; 
-    margin-bottom: 80px;
- 
+    background-position:  center;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.cover-img{
+    height: 60%;
+    position: absolute;
+    top: calc((100% / 10));
+    padding-left : auto;
+    padding-right: auto;
+    background: blue;
 }
 .info{
     /* margin-left: calc(100vw/4); */
@@ -56,8 +70,7 @@ export default{
     .info{
         grid-template-columns: auto;
     }
-    .grid-container{
-        display: block;
+    .blur-container{
         width:90%;
         object-fit: cover;
         height: 65vw;

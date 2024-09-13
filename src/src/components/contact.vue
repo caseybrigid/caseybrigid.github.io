@@ -16,7 +16,7 @@
     <br>
     <div class="blur-container">
         <div class="blurred-background"></div>
-        <img class="cover-img" :src="'/contact/8.JPG'" />
+        <img class="cover-img" src="/contact/image.jpg" />
     </div>
 </template>
 <script>
@@ -37,7 +37,7 @@ export default{
 .blurred-background{
     width: 99%;
     height:80%;
-    background-image: url('8.JPG');
+    background-image: url('/contact/image.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     background-position:  center;
